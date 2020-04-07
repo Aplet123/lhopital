@@ -34,7 +34,7 @@ impl<'a, T, M> Choices<'a, T, M> {
             Ok(ind) => {
                 if ind > self.choices.len() {
                     println!("Your input is not in the range of the list.");
-                    self.get_input();
+                    return self.get_input();
                 }
                 return self.choices[ind - 1];
             }
